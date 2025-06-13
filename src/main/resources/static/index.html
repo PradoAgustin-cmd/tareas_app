@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>tareas.app</title>
+    <link rel="stylesheet" href="css/tarea.css">
+</head>
+<body>
+	<div class="container">
+	    <h1>Mis Tareas</h1>
+	
+	    <form id="form-tarea">
+	        <input type="text" id="texto" placeholder="Nueva tarea..." required>
+	        <button type="submit">Agregar</button>
+	    </form>
+	
+	    <div class="filtros">
+	        <button onclick="filtrar('todas')">Todas</button>
+	        <button onclick="filtrar('completadas')">Completadas</button>
+	        <button onclick="filtrar('pendientes')">Pendientes</button>
+	    </div>
+	
+	    <ul id="lista-tareas">
+	        <!-- Las tareas se listarán aquí dinámicamente -->
+	    </ul>
+	</div>
+	
+	<template id="template-tarea">
+	    <li data-id="">
+	        <span class="texto"></span>
+	        <span class="fecha"></span>
+	        <div class="acciones">
+	            <button class="toggle">✔️</button>
+	            <button class="editar">✏️</button>
+	            <button class="eliminar">🗑️</button>
+	        </div>
+	    </li>
+	</template>
+
+    <script src="js/tarea.js"></script>
+</body>
+</html>
